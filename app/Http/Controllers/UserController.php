@@ -12,8 +12,6 @@ use Illuminate\Http\Request;
 			]);
 		}
 
-
-
 		public function namesurname($name, $surname)
 		{
 			return view('user.names', [
@@ -23,8 +21,6 @@ use Illuminate\Http\Request;
 			]);
 		}
 
-
-
 		public function hello($age)
 		{
 			return view('user.hello', [
@@ -33,10 +29,25 @@ use Illuminate\Http\Request;
 			]);
 		}
 
+        public function nas($name, $age, $salary)
+		{
+			return view('user.nas', [
+				'title' => 'page title',
+				'name'  => $name,
+				'age'  => $age,
+				'salary'  => $salary,
+			]);
+		}
 
-
-
-
+        public function class($age, $name, $surname)
+		{
+			return view('user.a', [
+				'title' => 'page title',
+                'age'  => $age,
+				'name'  => $name,
+				'surname'  => $surname,
+			]);
+		}
 
 
 

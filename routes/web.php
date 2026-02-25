@@ -15,9 +15,9 @@ use App\Http\Controllers\UserController;
 |
 */
 
+Route::get('/user/{age}/{name}/{surname}', [UserController::class, 'class']);
+Route::get('/user/{name}/{age}/{salary}', [UserController::class, 'nas']);
 Route::get('/user/names/{age}', [UserController::class, 'hello']);
 Route::get('/user/names/{name}/{surname}', [UserController::class, 'namesurname']);
 Route::get('/user/shows', [UserController::class, 'show']);
 Route::get('/post/show', [PostController::class, 'show']);
-
-

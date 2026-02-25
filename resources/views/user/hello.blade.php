@@ -3,5 +3,5 @@
 		{{ $title }} - site.com
 	</x-slot>
 	
-	{{ $age }}
+  {{ $age }}
 </x-layout>
