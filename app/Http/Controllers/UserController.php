@@ -8,9 +8,32 @@ use Illuminate\Http\Request;
 		{
 			return view('user.shows', [
 				'title' => 'page title',
-				'text'  => 'салем',
+				'text'  => 'привет',
 			]);
 		}
+
+
+
+		public function namesurname($name, $surname)
+		{
+			return view('user.names', [
+				'title' => 'page title',
+				'name'  => $name,
+				'surname' => $surname
+			]);
+		}
+
+
+
+		public function hello($age)
+		{
+			return view('user.hello', [
+				'title' => 'page title',
+				'age'  => $age,
+			]);
+		}
+
+
 
 
 
