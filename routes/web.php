@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
-
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +14,7 @@ use App\Http\Controllers\PostController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/test', function () {                                              
-    return 'ТЕСТ';
-});
+Route::get('/user/shows', [UserController::class, 'show']);
+Route::get('/post/show', [PostController::class, 'show']);
 
 

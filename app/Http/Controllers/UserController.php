@@ -2,14 +2,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-	class PostController extends Controller
+	class UserController extends Controller
 	{
 		public function show()
 		{
-			return view('post.show', [
+			return view('user.shows', [
 				'title' => 'page title',
-				'text'  => 'page content',
+				'text'  => 'салем',
 			]);
 		}
+
+
+
+
+
+
+
+
 	}
 ?>
