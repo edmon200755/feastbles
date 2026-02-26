@@ -39,6 +39,14 @@ use Illuminate\Http\Request;
 			]);
 		}
 
+
+        public function num2()
+		{
+            $peremen = 'color: blue';
+			return view('user.num2', 
+				compact('peremen'));
+		}
+
         public function class($age, $name, $surname)
 		{
 			return view('user.a', [
@@ -48,6 +56,36 @@ use Illuminate\Http\Request;
 				'surname'  => $surname,
 			]);
 		}
+
+		public function red()
+		{
+            $peremen = 'color: red';
+			return view('user.red', [
+				'title' => 'page title',
+                'peremen'  => $peremen,
+			]);
+		} 
+
+		public function href()
+		{
+			$text = 'Перейти по ссылке';
+            $href = 'https://omacademy.ru/';
+			return view('user.href', [
+				'title' => 'page title',
+            'text' => $text,
+			'href' => $href
+			]);
+		}
+
+		public function date()
+		{
+            $artem = date('d.m.Y');
+			return view('user.date', [
+				'title' => 'page title',
+				'artem' => $artem
+			]);
+		}
+
 
 
 

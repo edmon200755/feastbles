@@ -15,7 +15,11 @@ use App\Http\Controllers\UserController;
 |
 */
 
+Route::get('/user/artem', [UserController::class, 'date']);
+Route::get('/user/href', [UserController::class, 'href']);
+Route::get('/user/red', [UserController::class, 'red']);
 Route::get('/user/{age}/{name}/{surname}', [UserController::class, 'class']);
+Route::get('/user/num2', [UserController::class, 'num2']);
 Route::get('/user/{name}/{age}/{salary}', [UserController::class, 'nas']);
 Route::get('/user/names/{age}', [UserController::class, 'hello']);
 Route::get('/user/names/{name}/{surname}', [UserController::class, 'namesurname']);
