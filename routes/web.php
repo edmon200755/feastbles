@@ -15,6 +15,18 @@ use App\Http\Controllers\UserController;
 |
 */
 
+Route::get('/user/summa', [UserController::class, 'sumas']);
+Route::get('/user/un', [UserController::class, 'unless']);
+Route::get('/user/rov', [UserController::class, 'rovno']);
+Route::get('/user/voz', [UserController::class, 'vozrast']);
+Route::get('/user/vz', [UserController::class, 'vozr']);
+Route::get('/user/comm', [UserController::class, 'comm']);
+Route::get('/user/zh', [UserController::class, 'zhir']);
+Route::get('/user/vr', [UserController::class, 'vremya']);
+Route::get('/user/pot', [UserController::class, 'pot']);
+Route::get('/user/city', [UserController::class, 'gorod']);
+Route::get('/user/mas', [UserController::class, 'mas']);
+Route::get('/user/sotr', [UserController::class, 'sotr']);
 Route::get('/user/artem', [UserController::class, 'date']);
 Route::get('/user/href', [UserController::class, 'href']);
 Route::get('/user/red', [UserController::class, 'red']);
