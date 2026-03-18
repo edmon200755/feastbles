@@ -15,6 +15,19 @@ use App\Http\Controllers\UserController;
 |
 */
 
+Route::get('/user/clacss', [UserController::class, 'clacss']);
+Route::get('/user/sd', [UserController::class, 'sod']);
+Route::get('/user/it', [UserController::class, 'iter']);
+Route::get('/user/uz', [UserController::class, 'users']);
+Route::get('/user/html', [UserController::class, 'html']);
+Route::get('/user/dt', [UserController::class, 'datka']);
+Route::get('/user/ch', [UserController::class, 'chetnie']);
+Route::get('/user/pl', [UserController::class, 'plus']);
+Route::get('/user/cp', [UserController::class, 'cpicok']);
+Route::get('/user/kor', [UserController::class, 'kor']);
+Route::get('/user/sq', [UserController::class, 'square']);
+Route::get('/user/sq', [UserController::class, 'square']);
+Route::get('/user/ul', [UserController::class, 'ul']);
 Route::get('/user/summa', [UserController::class, 'sumas']);
 Route::get('/user/un', [UserController::class, 'unless']);
 Route::get('/user/rov', [UserController::class, 'rovno']);

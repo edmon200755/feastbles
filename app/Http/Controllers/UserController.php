@@ -203,6 +203,132 @@ use Illuminate\Http\Request;
 			]);
 		}
 
+		public function ul()
+		{
+   
+			return view('user.ul', [
+				'title' => 'page title',
+				'arr' => [1,2,3,4,5]
+			]);
+		}
+
+		public function square()
+		{
+   
+			return view('user.square', [
+				'title' => 'page title',
+				'arr' => [1,2,3,4,5]
+			]);
+		}
+
+		public function kor()
+		{
+   
+			return view('user.kor', [
+				'title' => 'page title',
+				'arr' => [1,2,3,4,5]
+			]);
+		}
+
+		public function cpicok()
+		{
+   
+			return view('user.cpicok', [
+				'title' => 'page title',
+				'arr' => ['Hello', 'World', 'Tamaev']
+			]);
+		}
+
+		public function plus()
+		{
+   
+			return view('user.plus', [
+				'title' => 'page title',
+				'arr' => ['Hello', 'World', 'Tamaev']
+			]);
+		}
+
+		public function chetnie()
+		{
+   
+			return view('user.chetnie', [
+				'title' => 'page title',
+				'arr' => [1,2,3,4,5,6,7,8,9,10]
+			]);
+		}
+
+		public function datka()
+		{
+            $data = 12;
+			return view('user.datka', [
+				'title' => 'page title',
+				'data' => $data
+			]);
+		}
+
+		public function html()
+		{
+            $employees = [
+		[
+			'name' => 'user1',
+			'surname' => 'surname1',
+			'salary' => 1000,
+		],
+		[
+			'name' => 'user2',
+			'surname' => 'surname2',
+			'salary' => 2000,
+		],
+		[
+			'name' => 'user3',
+			'surname' => 'surname3',
+			'salary' => 3000,
+		],
+	];
+			return view('user.html', [
+				'title' => 'page title',
+				'employees' => $employees
+				
+
+			]);
+		}
+
+		public function users()
+		{
+            $users = ['Artem2007', 'Edmon2007', 'Trofimoz2007', 'Zetmermeister2007'];
+			return view('user.users', [
+				'title' => 'page title',
+				'users' => $users
+			]);
+		}
+
+		public function iter()
+		{
+            $users = ['Artem2007', 'Edmon2007', 'Trofimoz2007', 'Zetmermeister2007'];
+			return view('user.iter', [
+				'title' => 'page title',
+                'users' => $users
+			]);
+		}
+
+		public function sod()
+		{
+            $users = ['Artem2007', 'Edmon2007', 'Trofimoz2007', 'Zetmermeister2007'];
+			return view('user.sod', [
+				'title' => 'page title',
+                'users' => $users
+			]);
+		}
+
+		public function clacss()
+		{
+            $users = ['Artem2007', 'Edmon2007', 'Trofimoz2007', 'Zetmermeister2007'];
+			return view('user.clacss', [
+				'title' => 'page title',
+                'users' => $users
+			]);
+		}
+
 
 
 

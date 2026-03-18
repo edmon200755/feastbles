@@ -2,8 +2,8 @@
 	<x-slot:title>
 		{{ $title }} - site.com
 	</x-slot>
-    Сумма:@if (count($arr)>0)
-     {{  }}
+    @if (count($arr)>0)
+     {{ array_sum($arr) }}
      @endif
      @if (count($arr)==0)
      В массиве нет элементов
