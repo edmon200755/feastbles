@@ -14,4 +14,4 @@ use App\Http\Controllers\UserController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('/user/db', [UserController::class, 'db']);

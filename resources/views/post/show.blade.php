@@ -2,6 +2,12 @@
 	<x-slot:title>
 		{{ $title }} - site.com
 	</x-slot>
-	
-	{{ $text }}
+	@foreach ($posts as $post)
+		<div>
+			<h2>{{ $post->title }}</h2>
+			<div>
+				{{ $post->slug }}
+			</div>
+		</div>
+	@endforeach
 </x-layout>
