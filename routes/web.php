@@ -15,6 +15,12 @@ use App\Http\Controllers\UserController;
 |
 */
 
+Route::get('/user/slc', [UserController::class, 'slc']);
+Route::get('/user/srtsrt', [UserController::class, 'srtsrt']);
+Route::get('/user/otst', [UserController::class, 'otst']);
+Route::get('/user/koll', [UserController::class, 'koll']);
+Route::get('/user/abz', [UserController::class, 'abz']);
+Route::get('/user/orr', [UserController::class, 'orr']);
 Route::get('/user/edt', [UserController::class, 'edt']);
 Route::get('/user/nail', [UserController::class, 'nail']);
 Route::get('/user/nsd', [UserController::class, 'nsd']);

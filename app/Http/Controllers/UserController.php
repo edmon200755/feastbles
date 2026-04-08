@@ -367,6 +367,58 @@ use Illuminate\Support\Facades\DB;
                 ->get();
             dump($users);
 		}
+
+		public function orr()
+		{
+			
+			$users = DB::table('users')
+			->where('age', '>=', 17)
+			->orWhere('age', '<=', 19)
+			->orWhere('salary', '>=', 400)
+			->orWhere('salary', '<=', 800)
+            ->get();
+            dump($users);
+		}
+
+		public function abz()
+		{
+			$users = DB::table('users')
+			->where('id', '=', 3)
+            ->get();
+            return view('user.abz', ['title' => 'page title','users' => $users]);
+		}
+
+		public function koll()
+		{
+			$titles = DB::table('users')->pluck('name');
+	        dump($titles);
+		}
+
+		public function otst()
+		{
+			$users = DB::table('users')
+		    ->orderBy('age', 'asc')
+		    ->get();
+	        dump($users);
+
+		}
+
+		public function srtsrt()
+		{
+			$users = DB::table('users')
+			->where('age', '>', 17)
+		    ->orderBy('updated_at', 'desc')
+		    ->get();
+	        dump($users);
+		}
+
+		public function slc()
+		{
+			$users = DB::table('users')
+		    ->inRandomOrder()
+		    ->first();
+	        dump($users);
+		}
 	
 	
 	
