@@ -336,6 +336,38 @@ use Illuminate\Support\Facades\DB;
 			return view('user.db', ['title' => 'page title','users' => $users]);
 		}
 
+		public function ckl()
+		{
+			$posts = DB::table('posts')->get();
+			
+			foreach ($posts as $post) {
+				dump($post);
+		}
+		}
+
+		public function nsd()
+		{
+			DB::enableQueryLog();
+			DB::table('posts')->where('id', '!=', 3)->get();
+            dump(DB::getQueryLog());
+		}
+
+		public function nail()
+		{
+			$users = DB::table('users')->get();
+			return view('user.nail', ['title' => 'page title','users' => $users]);
+		}
+
+		public function edt()
+		{
+			
+			$users = DB::table('users')->where('age', '=', 19)->orWhere(function($query) {
+			$query
+				->where('id', '>', 1);})
+                ->get();
+            dump($users);
+		}
+	
 	
 	
 
