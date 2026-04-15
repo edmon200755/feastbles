@@ -2,12 +2,12 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,54 +18,70 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-            DB::table('posts')->insert([
+        // User::factory(10)->create();
 
-				['title' => 'title 1',
-				'slug'  => 'post-1',
-                'likes' => '10',
-                'created_at' => '2025-04-15',
-				'updated_at'  => '2025-05-26'],
-
-                ['title' => 'title 2',
-				'slug'  => 'post-2',
-                'likes' => '11',
-                'created_at' => '2025-08-27',
-				'updated_at'  => '2025-11-14'],
-
-                ['title' => 'title 3',
-				'slug'  => 'post-3',
-                'likes' => '12',
-                'created_at' => '2025-12-01',
-				'updated_at'  => '2025-12-08'],
-
-			]);
-
-            DB::table('users')->insert([
-
-				['name' => 'Artem',
-				'email' => Str::random(10).'@gmail.com',
+        DB::table('users')->insert([
+            [
+                'name' => 'артем',
+                'email' => Str::random(10) . '@gmail.com',
                 'age' => '18',
-                'salary' => '5000',
-                'created_at' => '2024-04-15',
-				'updated_at'  => '2024-05-26'],
+                'salary' => '30000',
+                'created_at' => '2026-02-23',
+                'updated_at' => '2026-03-23',
+            ],
 
-                ['name' => 'Edmon',
-				'email' => Str::random(10).'@gmail.com',
-                'age' => '19',
-                'salary' => '7000',
-                'created_at' => '2024-06-17',
-				'updated_at'  => '2024-08-08'],
+            [
+                'name' => 'эдмон',
+                'email' => Str::random(10) . '@gmail.com',
+                'age' => '18',
+                'salary' => '30000',
+                'created_at' => '2026-02-23',
+                'updated_at' => '2026-03-23',
+            ],
+            [
+                'name' => 'иван',
+                'email' => Str::random(10) . '@gmail.com',
+                'age' => '20',
+                'salary' => '10000',
+                'created_at' => '2026-02-23',
+                'updated_at' => '2026-03-23',
+            ]
+        ]);
 
-                ['name' => 'Polina',
-				'email' => Str::random(10).'@gmail.com',
-                'age' => '17',
-                'salary' => '4000',
-                'created_at' => '2024-11-12',
-				'updated_at'  => '2024-12-03'],
+        DB::table('posts5')->insert(
+            [
+                [
+                    'title' => 'Новость 1',
+                    'desc' => Str::random(10),
+                    'text' => Str::random(30),
+                    'created_at' => '2026-02-23',
+                ],
 
-			]);
-
-
-
+                [
+                    'title' => 'Новость 2',
+                    'desc' => Str::random(10),
+                    'text' => Str::random(30),
+                    'created_at' => '2026-02-23',
+                ],
+                [
+                    'title' => 'Новость 3',
+                    'desc' => Str::random(10),
+                    'text' => Str::random(30),
+                    'created_at' => '2026-02-24',
+                ],
+                [
+                    'title' => 'Новость 4',
+                    'desc' => Str::random(10),
+                    'text' => Str::random(30),
+                    'created_at' => '2026-02-25',
+                ],
+                [
+                    'title' => 'Новость 5',
+                    'desc' => Str::random(10),
+                    'text' => Str::random(30),
+                    'created_at' => '2026-02-25',
+                ],
+            ]
+        );
     }
 }

@@ -11,18 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-         Schema::table('uzerz', function (Blueprint $table) {
-            $table->string('salary')->default('0');
-            $table->string('salarys')->default('0');
+        Schema::create('posts5', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->text('desc');
+            $table->text('text');
+            $table->timestamps();
         });
     }
-    
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('posts5');
     }
 };

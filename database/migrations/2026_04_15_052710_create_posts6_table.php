@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('uzerz', function (Blueprint $table) {
+        Schema::create('posts6', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->string('name');
-            $table->string('surname');
-            $table->date('dateborn');
-            $table->string('datesoz')->comment('my comment');
+            $table->string('title');
+            $table->text('desc');
+            $table->text('text');
+            $table->datetime('created_at');
         });
     }
 
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('uzerz');
+        Schema::dropIfExists('posts6');
     }
 };
