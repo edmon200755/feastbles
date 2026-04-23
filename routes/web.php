@@ -15,6 +15,7 @@ use App\Http\Controllers\UserController;
 |
 */
 
+Route::get('/post/id', [PostController::class, 'getone'])->where('id', '[1-5]');;
 Route::get('/post/all', [PostController::class, 'pp']);
 Route::get('/user/slc', [UserController::class, 'slc']);
 Route::get('/user/srtsrt', [UserController::class, 'srtsrt']);
