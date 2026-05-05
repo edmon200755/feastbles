@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\DB;
 
 		public function getone()
 		{
-			$posts = Post5::find(1); 
+			$posts = Post5::find([4]); 
 			return view('post.getone', ['title' => 'page title','posts' => $posts]);
 		}
 
