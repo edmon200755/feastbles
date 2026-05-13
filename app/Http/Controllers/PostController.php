@@ -27,6 +27,12 @@ use Illuminate\Support\Facades\DB;
 			return view('post.getone', ['title' => 'page title','posts' => $posts]);
 		}
 
+		public function newpost()
+		{
+			$posts = Post5::find([4]); 
+			return view('post.newpo', ['title' => 'page title','posts' => $posts]);
+		}
+
 
 
 
