@@ -27,10 +27,17 @@ use Illuminate\Support\Facades\DB;
 			return view('post.getone', ['title' => 'page title','posts' => $posts]);
 		}
 
-		public function newpost()
+		public function newpost(Request $request)
 		{
-			$posts = Post5::find([4]); 
-			return view('post.newpo', ['title' => 'page title','posts' => $posts]);
+           
+		}
+
+		public function smena(Request $request)
+		{
+			$post = Post5::find(2);
+	        $post->title = 'Новый заголовок записи с id 2';
+			$post->desc = 'чето чето';
+	        $post->save();
 		}
 
 
